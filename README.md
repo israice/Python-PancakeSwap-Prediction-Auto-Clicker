@@ -70,7 +70,7 @@ git pull origin main
 # UPDATE REPO
 git add .
 git commit -m "v.1.0.0 ✅ автоматически создает ордер"
-git push master main
+git push main
 
 
 ✅ ☑️ ✔️ ✳️ ❌ ❎ ✖️ 🔁 🔂 🔄
