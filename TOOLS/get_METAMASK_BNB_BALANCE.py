@@ -6,13 +6,14 @@ from decimal import Decimal, getcontext
 from web3 import Web3
 
 # ===== НАСТРОЙКИ =====
-ENV_PATH = ".env"
 SETTINGS_PATH = "settings.yaml"
+YAML_KEY = "END_BNB_METAMASK_BALANCE"
+
+ENV_PATH = ".env"
 ENV_ADDRESS_KEY = "METAMASK_BSC_ADDRESS"   # имя переменной с адресом
 ENV_RPC_KEY = None  # например, "BSC_RPC_URL"; None — не читать RPC из .env
 RPC_URL = "https://bsc-dataseed1.bnbchain.org"  # BSC Mainnet (дефолт; может быть переопределён через ENV_RPC_KEY)
 DECIMAL_PLACES = 8  # сколько знаков писать в YAML
-YAML_KEY = "END_METAMASK_BNB_BALANCE"
 
 getcontext().prec = 80  # высокая точность для деления wei -> BNB
 

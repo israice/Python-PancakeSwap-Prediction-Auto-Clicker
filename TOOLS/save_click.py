@@ -12,8 +12,8 @@ from pynput import mouse
 
 # ==============================
 # Глобальные настройки
-SETTINGS_FILE = "settings.yaml"     # путь к файлу настроек
-VARIABLE_NAME = "PIXEL_POINT"       # имя переменной по умолчанию (можно переопределить аргументом)
+SETTINGS_FILE = "CORE/AB_RECONFIG_CLICKS.yaml"     # путь к файлу настроек
+VARIABLE_NAME = "PIXEL_CONFIG"       # имя переменной по умолчанию (можно переопределить аргументом)
 # ==============================
 
 # ---- DPI awareness (важно для корректных координат на Windows) ----

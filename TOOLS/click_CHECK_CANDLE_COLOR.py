@@ -1,9 +1,3 @@
-# click_point.py
-# 1) Ставит курсор на координаты из CHECK_CANDLE_COLOR: x,y,monitor=N (settings.yaml)
-# 2) Ждёт COLOR_READ_DELAY
-# 3) Считывает цвет пикселя под курсором
-# 4) Обновляет CANDLE_COLOR: <GREEN|RED|ZERO> (сохраняя форматирование файла)
-
 import sys
 import time
 import platform
@@ -14,16 +8,16 @@ from ctypes import wintypes
 from pynput.mouse import Controller
 
 # ==============================
-SETTINGS_FILE = "settings.yaml"         # путь к файлу настроек
-VAR_COORDS   = "CHECK_CANDLE_COLOR"     # имя переменной с координатами
+SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"         # путь к файлу настроек
+VAR_COORDS   = "CLICK_CANDLE_COLOR"     # имя переменной с координатами
 VAR_RESULT   = "CANDLE_COLOR"           # ключ, куда записываем результат
 
 VALUE_GREEN_WORD = "GREEN"
 VALUE_RED_WORD   = "RED"
 VALUE_ZERO_WORD  = "ZERO"               # <-- записываем это, если ни один цвет не совпал
 
-COLOR_GREEN_HEX = "#31d0aa"
-COLOR_RED_HEX   = "#ed4b9e"
+COLOR_GREEN_HEX = "#ed4b9e"
+COLOR_RED_HEX   = "#31d0aa"
 COLOR_READ_DELAY = 0.5
 # ==============================
 
@@ -171,15 +165,21 @@ def _replace_yaml_scalar_value(settings_path, key, new_value):
     text = raw.decode("utf-8-sig", errors="replace")
     lines = text.splitlines(keepends=True)
 
-    pattern = re.compile(rf'^(\s*{re.escape(key)}\s*:\s*)([^#\r\n]*?)(\s*)((#.*)?)$', re.UNICODE)
+    # новая регулярка с захватом конца строки
+    pattern = re.compile(
+        rf'^(\s*{re.escape(key)}\s*:\s*)([^#\r\n]*?)(\s*)((#.*)?)(\r?\n)?$',
+        re.UNICODE
+    )
 
     replaced = False
     for i, line in enumerate(lines):
         m = pattern.match(line)
         if m:
-            prefix, old_value, spacing, comment, _ = m.groups()
-            # сохранить оригинальный конец строки
-            eol = line[len(line.rstrip("\r\n")):]
+            prefix = m.group(1)
+            old_value = m.group(2)
+            spacing = m.group(3)
+            comment = m.group(4) or ""
+            eol = m.group(6) or ""
             new_line = f"{prefix}{new_value}{spacing}{comment}{eol}"
             lines[i] = new_line
             replaced = True

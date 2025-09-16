@@ -4,8 +4,8 @@
 """
 
 # ===== НАСТРОЙКИ =====
-SETTINGS_PATH = "settings.yaml"  # путь к YAML-файлу (с прямыми слэшами)
-KEY_NAME      = "ROUND_COUNTER"  # какой ключ увеличиваем
+SETTINGS_PATH = "CORE/C_RELOAD_ALL.yaml"  # путь к YAML-файлу (с прямыми слэшами)
+KEY_NAME      = "MAXIMUM_ROUND_COUNTER"  # какой ключ увеличиваем
 INCREMENT_BY  = 1                # на сколько увеличивать (целое число)
 ENCODING      = "utf-8"          # кодировка файла
 MAKE_BACKUP   = False            # создавать ли .bak копию перед записью (выкл)

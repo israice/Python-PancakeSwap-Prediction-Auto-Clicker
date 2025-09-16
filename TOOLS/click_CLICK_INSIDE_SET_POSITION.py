@@ -11,10 +11,10 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "settings.yaml"                    # путь к файлу настроек
+SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"                    # путь к файлу настроек
 VARIABLE_NAME = "CLICK_INSIDE_SET_POSITION"        # имя переменной координат (можно переопределить аргументом)
 CLICK_DELAY = 0.5                                  # задержка перед/после клика, сек
-INSERT_VAR_NAME = "INSERT_AMMOUNT"                 # имя переменной со значением для вставки
+INSERT_VAR_NAME = "INSERT_AMMOUNT_IN_BNB"                 # имя переменной со значением для вставки
 # ==============================
 
 mouse = Controller()

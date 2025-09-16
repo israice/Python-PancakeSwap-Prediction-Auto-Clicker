@@ -4,7 +4,7 @@
 import re
 import sys
 
-YAML_PATH = "settings.yaml"              # путь к файлу (только прямые слэши)
+YAML_PATH = "CORE/C_RELOAD_ALL.yaml"              # путь к файлу (только прямые слэши)
 SRC_KEY   = "PIXEL_POINT"                # откуда копировать значение
 DST_KEY   = "CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP"         # куда вставить значение
 

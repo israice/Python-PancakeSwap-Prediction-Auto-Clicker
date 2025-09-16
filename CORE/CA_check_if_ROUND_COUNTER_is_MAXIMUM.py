@@ -4,17 +4,31 @@ import sys
 
 # Запуск если значения переменных одинаковые 
 SETTINGS_FILE = "settings.yaml"
-YAML_KEY_MAIN = "ALL_ROUNDS_COUNTER"
-
-CONFIG_FILE = "CORE/AA_RECONFIG_CLICKS.yaml"
-YAML_KEY_CONFIG = "MAXIMUM_ROUND_COUNTER_CONFIG"
+YAML_KEY_MAIN = "MAXIMUM_ROUND_COUNTER_CONFIG"
+# check if =
+CONFIG_FILE = "CORE/C_RELOAD_ALL.yaml"
+YAML_KEY_CONFIG = "MAXIMUM_ROUND_COUNTER"
 
 MAIN_SCRIPTS = [
-    {"print": "reset_ROUND_COUNTER..."},
-    "TOOLS/reset_ROUND_COUNTER.py",
-    "TOOLS/enable_CONFIG_ORDER.py",
+    {"print": "Reloading ALL..."},
+    "TOOLS/enable_RESET.py",
+    "CORE/A_RESET.py",
     # ##############################
-    "TOOLS/copy_click_to_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",
+    "CORE/CAA_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",
+    "CORE/CAB_if_true.py",
+    # ##############################
+    "TOOLS/click_OPEN_HISTORY_SIDEBAR.py",
+        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "TOOLS/click_FILTER_BY_UNCOLLECTED.py",
+        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/CAC_CHECK_WINNINGS_COLOR.py",
+        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/CAD_if_true.py",    
+    # ##############################
+    "TOOLS/click_REFRESH_BROWSER.py",
+        "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "TOOLS/get_METAMASK_BNB_BALANCE.py",
+    "TOOLS/create_INSERT_AMMOUNT_IN_BNB.py",
 ]
 
 
@@ -38,7 +52,6 @@ def run_script(script):
 def run_script_list(scripts):
     """Выполняем список шагов по очереди"""
     for i, script in enumerate(scripts, start=1):
-        print(f"[{i}/{len(scripts)}] Выполнение шага...")
         run_script(script)
 
 
@@ -50,18 +63,13 @@ def main():
     val_main = settings.get(YAML_KEY_MAIN)
     val_conf = config.get(YAML_KEY_CONFIG)
 
-    print(f"{YAML_KEY_MAIN} = {val_main}, {YAML_KEY_CONFIG} = {val_conf}")
 
     if val_main == val_conf:
-        print("→ Значения совпадают, запускаем MAIN_SCRIPTS...")
         run_script_list(MAIN_SCRIPTS)
-    else:
-        print("→ Значения НЕ совпадают, запуск отменён.")
 
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n[INTERRUPT] Пользователь прервал выполнение (Ctrl+C).")
         sys.exit(0)

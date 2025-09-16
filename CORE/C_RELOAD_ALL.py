@@ -3,18 +3,13 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "settings.yaml"
+SETTINGS_FILE = "CORE/C_RELOAD_ALL.yaml"
 YAML_KEY_RUNNER = "C_RELOAD_ALL"
 RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    {"print": "get RELOAD_ALL..."},
-    # "TOOLS/get_CANDLE_TIME.py",
-    # "TOOLS/check_if_CANDLE_TIME_is_3.py",
-    # "CORE/CA_check_if_CANDLE_TIME_IS_3_true.py",
-    # "CORE/CB_check_if_ROUND_COUNTER_is_10.py",
-    
-    # "TOOLS/SYSTEM_LARGE_DELAY_IN_SECONDS.py",    
+    {"print": "CHECK IF NEED TO RELOAD_ALL..."},
+    "CORE/CA_check_if_ROUND_COUNTER_is_MAXIMUM.py",  
 ]
 # ==============================================
 
@@ -56,13 +51,10 @@ def main():
     settings = load_settings()
     if is_runner_on(settings.get(YAML_KEY_RUNNER, "")):
         run_script_list(MAIN_SCRIPTS)
-    else:
-        print(f"{YAML_KEY_RUNNER} != {RUNNER_ON_VALUE} → запуск отменён")
 
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n[INTERRUPT] Пользователь прервал выполнение (Ctrl+C).")
         sys.exit(0)

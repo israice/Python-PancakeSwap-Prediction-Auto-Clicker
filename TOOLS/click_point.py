@@ -10,8 +10,8 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "settings.yaml"     # путь к файлу настроек
-VARIABLE_NAME = "PIXEL_POINT"       # имя переменной по умолчанию (можно переопределить аргументом)
+SETTINGS_FILE = "CORE/AA_RECONFIG_CLICKS.yaml"     # путь к файлу настроек
+VARIABLE_NAME = "PIXEL_CONFIG"       # имя переменной по умолчанию (можно переопределить аргументом)
 CLICK_DELAY = 0.5                  # задержка перед кликом, сек
 # ==============================
 

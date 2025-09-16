@@ -10,8 +10,8 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "settings.yaml"     # путь к файлу настроек
-VARIABLE_NAME = "CLICK_ON_CONFIRM_AMMOUNT"       # имя переменной по умолчанию (можно переопределить аргументом)
+SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"     # путь к файлу настроек
+VARIABLE_NAME = "CLICK_ON_PANCAKE_CONFIRM_BUTTON"       # имя переменной по умолчанию (можно переопределить аргументом)
 CLICK_DELAY = 0.5                  # задержка перед кликом, сек
 # ==============================
 

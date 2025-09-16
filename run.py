@@ -9,13 +9,16 @@ YAML_KEY_RUNNER = "SYSTEM_RUNNER"
 RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    "CORE/A_PRE_RESET.py",
-    "CORE/B_RELOAD_ORDER.py",
+    "CORE/A_RESET.py",
     "CORE/C_RELOAD_ALL.py",
+    "CORE/B_RELOAD_ORDER.py",
 ]
 
 SCRIPTS_FINALIZATION = [
     {"print": "FITALATY !!!"},
+    "TOOLS/enable_SYSTEM_RUNNER.py",
+    "TOOLS/enable_RESET.py",
+    "TOOLS/enable_PRE_RESET.py",
 ]
 # ==============================================
 
@@ -43,7 +46,6 @@ def run_script(script):
     if isinstance(script, dict) and "print" in script:
         print(script["print"])
     elif isinstance(script, str):
-        print(f"=== RUN {script} ===")
         subprocess.run(["python", script], check=False)
     else:
         print(f"[WARN] Неверный тип шага: {script}")

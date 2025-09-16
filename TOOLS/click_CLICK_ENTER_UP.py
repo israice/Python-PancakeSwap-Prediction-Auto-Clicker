@@ -10,7 +10,7 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "settings.yaml"     # путь к файлу настроек
+SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"     # путь к файлу настроек
 VARIABLE_NAME = "CLICK_ENTER_UP"       # имя переменной по умолчанию (можно переопределить аргументом)
 CLICK_DELAY = 0.5                  # задержка перед кликом, сек
 # ==============================
