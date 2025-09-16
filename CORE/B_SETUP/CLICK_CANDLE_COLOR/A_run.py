@@ -3,31 +3,17 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "CORE/AUTORUN/B_log_in.yaml"
-YAML_KEY_RUNNER = "B_LOG_IN"
+SETTINGS_FILE = "settings.yaml"
+YAML_KEY_RUNNER = "SYSTEM_RUNNER"
 RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    {"print": "Metamask Log In..."},
-    "CORE/AUTORUN/tools/click_metamask_icon.py",
-    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/AUTORUN/tools/insert_metamask_password.py",
-    "CORE/AUTORUN/tools/click_unlock_metamask.py",
-    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "TOOLS/click_REFRESH_BROWSER.py",
-    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "CORE/AUTORUN/tools/click_pancake_log_in_button.py",
-    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/AUTORUN/tools/click_choose_metamask_wallet.py",
-    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/AUTORUN/tools/click_choose_network.py",
-    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/AUTORUN/tools/click_metamask_connect_button.py",
-    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "TOOLS/click_REFRESH_BROWSER.py",
-    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    {"print": "create_CLICK_CANDLE_COLOR..."},
+    "CORE/B_SETUP/CLICK_CANDLE_COLOR/AA_create_CLICK_CANDLE_COLOR.py",
+    {"print": "check if correct colores picked..."},
+    "TOOLS/click_CHECK_CANDLE_COLOR.py",
+    "CORE/B_SETUP/CLICK_CANDLE_COLOR/AB_if_CANDLE_COLOR_is_ZERO.py",
 ]
-# ==============================================
 
 
 def load_settings():

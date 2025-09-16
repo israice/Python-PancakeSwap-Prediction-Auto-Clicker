@@ -10,8 +10,8 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "CORE/AUTORUN/B_log_in.yaml"     # путь к файлу настроек
-VARIABLE_NAME = "click_choose_network"       # имя переменной по умолчанию (можно переопределить аргументом)
+SETTINGS_FILE = "CORE/A_AUTORUN/B_log_in.yaml"     # путь к файлу настроек
+VARIABLE_NAME = "click_metamask_icon"       # имя переменной по умолчанию (можно переопределить аргументом)
 CLICK_DELAY = 0.5                  # задержка перед кликом, сек
 # ==============================
 

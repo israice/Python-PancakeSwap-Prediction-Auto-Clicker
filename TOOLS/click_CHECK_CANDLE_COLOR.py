@@ -16,8 +16,8 @@ VALUE_GREEN_WORD = "GREEN"
 VALUE_RED_WORD   = "RED"
 VALUE_ZERO_WORD  = "ZERO"               # <-- записываем это, если ни один цвет не совпал
 
-COLOR_GREEN_HEX = "#ed4b9e"
-COLOR_RED_HEX   = "#31d0aa"
+COLOR_GREEN_HEX = "#31d0aa"
+COLOR_RED_HEX   = "#ed4b9e"
 COLOR_READ_DELAY = 0.5
 # ==============================
 

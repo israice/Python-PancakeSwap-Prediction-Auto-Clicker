@@ -3,32 +3,29 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"
-YAML_KEY_RUNNER = "CANDLE_COLOR"
-RUNNER_ON_VALUE = "RED"
+SETTINGS_FILE = "CORE/A_AUTORUN/B_log_in.yaml"
+YAML_KEY_RUNNER = "B_LOG_IN"
+RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    {"print": "RED..."},
-    "TOOLS/click_CLICK_ENTER_DOWN.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-
-    "TOOLS/click_CLICK_INSIDE_SET_POSITION.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_CONFIRM_AMMOUNT.py",
-        "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_METAMASK_ORDER.py",
-        "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_METAMASK_ORDER.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_CLOSE_EXTENSION.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-
-    "TOOLS/add_plus_1_to_ROUND_COUNTER.py",
-    "TOOLS/add_plus_1_to_ALL_ROUNDS_COUNTER.py",
-    
+    {"print": "Metamask Log In..."},
+    "CORE/A_AUTORUN/tools/click_metamask_icon.py",
+    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/A_AUTORUN/tools/insert_metamask_password.py",
+    "CORE/A_AUTORUN/tools/click_unlock_metamask.py",
+    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
     "TOOLS/click_REFRESH_BROWSER.py",
-    "TOOLS/SYSTEM_XXL_DELAY_IN_SECONDS.py",
-    
+    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/A_AUTORUN/tools/click_pancake_log_in_button.py",
+    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/A_AUTORUN/tools/click_choose_metamask_wallet.py",
+    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/A_AUTORUN/tools/click_choose_network.py",
+    "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/A_AUTORUN/tools/click_metamask_connect_button.py",
+    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "TOOLS/click_REFRESH_BROWSER.py",
+    "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
 ]
 # ==============================================
 

@@ -1,36 +1,46 @@
 # ABOUT
-это мой личный эксперемент, цель которого:
-1. автоматизировать клики в системе pancakeswap.finance/prediction 
-2. изалировать систему кликов от основного комьютера
-3. создать максимально простую авто настройку развертывания проекта
 
-## Что умеет проект
-- Делает ставку в pancakeswap prediction сомостоятельно
-- используются кардинаты экрана для авто кликов мышью
-- Системные требования: windows + chrome + metamask
+This is my personal experiment, with the following goals:
+
+1. Automate clicks in the pancakeswap.finance/prediction system
+2. Isolate the click system from the main computer
+3. Create the simplest possible auto-setup for project deployment
+4. планируеться запустить 2 разных пользователя для сравнения стратегий
+    - каждый из двух пользователей имеет отдельный metamask +50 USD
+    - первый выполняет стратегию "anti-market"
+    - второй выполняет стратегию "go-with-the-flow"
+5. цель проверить какой из двух стратегий более прибыльный
+    - ожидание - одна из стратегий перекачает средства из другой
+    - и станет победителем теста 
+    - она же продолжит чтобы посмотреть результят в долгосрок
+    - все ставки делаються пока что по 0.002 BNB
+6. далее сделаю ставку динамически
+7. создать yaml USER DASHBOARD
+8. отоброзить данные в HTML (view only)
+9. запустить HTML страницу в интернете для внешнего доступа
+10. автоматизировать процессы deploy с нуля и инструкции к ним
+
+## What the project can do
+
+- Places bets in PancakeSwap Prediction independently
+- Uses screen coordinates for automated mouse clicks
+- System requirements: Windows + Chrome + MetaMask
 
 
-# INSTALL
-pip install -r requirements.txt
+# Prohibitions and Recommendations
 
-# RUN
-python run.py
-
-
-# Запреты и рекомендации
-- двигать мышью лишний раз не желательно, чтобы не сдвинуть во время выполнения 
-- открывать metamask в отдельном ТАБе нельзя, отменяет metamask popup
-- нельзя менять размер браузера, иначе придется заново настраивать клики
-- рекомендация начать с минимум 100 USD на считу BNB, это 25 ходов по 2.5 USD
-- использовать только как отдельный пользователь winodws, или отдельный комьютер
-- главное лишний раз не двигать мышь, иначе можно сбить во время выполнения 
+- Avoid moving the mouse unnecessarily to prevent shifting during execution
+- Do not open MetaMask in a separate tab, as it cancels the MetaMask popup
+- Do not resize the browser, as it will require reconfiguring the clicks
+- Recommended to start with at least 100 USD in BNB, equivalent to 25 moves at 2.5 USD each
+- Use only as a separate Windows user or on a dedicated computer
+- Avoid moving the mouse unnecessarily, as it may disrupt execution
 
 <!-- ---------------------- -->
 
 <details>
 
   <summary>Instructions for clicks setup</summary>
-
 
 <details>
 
@@ -42,36 +52,52 @@ python run.py
 
 </details>
 
-
 <!-- ---------------------- -->
-
-
 
 <details>
 
   <summary>For Development</summary>
 
-### v.1.0
-- автоматически создает ордер
-- автоматически саберает выигрышь
-- создан autorun flow, для авто входа после перезагрузки PC
+### VERSION
+
+- v.0.0.1 Automatically creates an order
+- v.0.0.2 Automatically collects winnings
+- v.1.0.0 Created an A_AUTORUN flow for auto-login after PC restart
+- v.1.0.1 созданы примеры настройки с изоброжением
 
 ### IN FUTURE
-- планируетсься проверить работу 
-- включая перезагрузку PC на отдельном пользователе windows
-- планируетсься создать удобный настройщик кликов с подсказками
-- планируеться проводить тесты цвета при подключении пикселей с цветом
 
+- Plan to test functionality
+- Including PC restart on a separate Windows user
+- Plan to create a user-friendly click setup tool with hints
+- Plan to conduct color tests when connecting pixels with color
 
+# INSTALL
 
-# DOWNLOAD UPDATED REPO
-git pull origin main
+```
+pip install -r requirements.txt
+```
 
-# UPDATE REPO
+# RUN
+
+```
+python run.py
+```
+
+# DOWNLOAD UPDATED FROM REMOTE REPO
+
+```
+git pull
+```
+
+# UPDATE REMOTE REPO
+
+```
 git add .
-git commit -m "v.1.0.0 ✅ автоматически создает ордер"
+git commit -m "v.1.0.1 созданы примеры настройки с изоброжением"
 git push
 
+```
 
 ✅ ☑️ ✔️ ✳️ ❌ ❎ ✖️ 🔁 🔂 🔄
 🚀 ⚙️ 💻 🔥 🧪 🐞 📝 🛠️ 🔄 🕒
@@ -91,6 +117,5 @@ git push
 🌪️ 🛸 🎲 🎮 🐛 🐜 🦠 ⏫ ⏬ ⏩
 ⏪ ⏭️ ⏮️ 🆗 🆕 🆙
 🪙 🪙 💰 💴 💵 💶 💷 💸 💳 🏦
-
 
 </details>

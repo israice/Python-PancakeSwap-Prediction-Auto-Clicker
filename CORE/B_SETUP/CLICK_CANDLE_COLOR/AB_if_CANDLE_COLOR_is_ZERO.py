@@ -5,30 +5,11 @@ import sys
 # ================= НАСТРОЙКИ =================
 SETTINGS_FILE = "CORE/B_RELOAD_ORDER.yaml"
 YAML_KEY_RUNNER = "CANDLE_COLOR"
-RUNNER_ON_VALUE = "RED"
+RUNNER_ON_VALUE = "ZERO"
 
 MAIN_SCRIPTS = [
-    {"print": "RED..."},
-    "TOOLS/click_CLICK_ENTER_DOWN.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-
-    "TOOLS/click_CLICK_INSIDE_SET_POSITION.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_CONFIRM_AMMOUNT.py",
-        "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_METAMASK_ORDER.py",
-        "TOOLS/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_METAMASK_ORDER.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "TOOLS/click_CLICK_ON_CLOSE_EXTENSION.py",
-        "TOOLS/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-
-    "TOOLS/add_plus_1_to_ROUND_COUNTER.py",
-    "TOOLS/add_plus_1_to_ALL_ROUNDS_COUNTER.py",
-    
-    "TOOLS/click_REFRESH_BROWSER.py",
-    "TOOLS/SYSTEM_XXL_DELAY_IN_SECONDS.py",
-    
+    {"print": "Wrong Pixel - Try again..."},
+    "CORE/B_SETUP/CLICK_CANDLE_COLOR/A_run.py",
 ]
 # ==============================================
 
