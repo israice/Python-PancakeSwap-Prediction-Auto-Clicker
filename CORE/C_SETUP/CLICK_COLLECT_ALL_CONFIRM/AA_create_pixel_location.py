@@ -9,12 +9,13 @@ import win32gui
 import win32con
 
 # Настройки
-IMAGE_PATH = "CORE/B_SETUP/CLICK_WINNINGS_COLOR/AA_image_CLICK_WINNINGS_COLOR.png"
+IMAGE_PATH = "CORE/C_SETUP/CLICK_COLLECT_ALL_CONFIRM/AB_image.png"
 SCALE_FACTOR = 1  # Уменьшение размера в 2 раза (50%)
 BORDER_OFFSET = 10  # Отступ от края экрана в пикселях
 POSITION = "bottom_left"  # Варианты: "top_left", "bottom_left", "top_right", "bottom_right"
+# ##########################################
 SETTINGS_FILE = "CORE/Y_DATA/C_flow.yaml"  # Путь к файлу настроек
-VARIABLE_NAME = "CLICK_WINNINGS_COLOR"  # Имя переменной для сохранения координат
+VARIABLE_NAME = "CLICK_COLLECT_ALL_CONFIRM"  # Имя переменной для сохранения координат
 
 # ---- DPI awareness (важно для корректных координат на Windows) ----
 def _make_dpi_aware():

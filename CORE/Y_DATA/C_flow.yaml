@@ -1,12 +1,12 @@
 # LOGIN FLOW #
-click_metamask_icon: 1601,109,monitor=3
+click_metamask_icon: 1603,112,monitor=3
 # insert_metamask_password
-click_unlock_metamask: 1120,819,monitor=3
+click_unlock_metamask: 2381,387,monitor=2
 # click_REFRESH_BROWSER
 # SYSTEM_MEDIUM_DELAY_IN_SECONDS
-click_pancake_log_in_button: 1792,242,monitor=3
+click_pancake_log_in_button: 2047,587,monitor=2
 click_choose_metamask_wallet: 645,533,monitor=3
-click_choose_network: 1262,689,monitor=3
+click_choose_network: 2155,604,monitor=2
 click_metamask_connect_button: 1659,957,monitor=3
 # click_REFRESH_BROWSER
 # SYSTEM_MEDIUM_DELAY_IN_SECONDS
@@ -34,7 +34,7 @@ CLICK_REFRESH_BROWSER: 162,110,monitor=3
 # RELOAD ORDER FLOW #
 CANDLE_TIME: 03:30
 CHECK_IF_CANDLE_TIME_IS_3: true
-CLICK_CANDLE_COLOR: 1753,1722,monitor=2
+CLICK_CANDLE_COLOR: 2272,605,monitor=2
 CANDLE_COLOR: ZERO
 CLICK_ENTER_UP: 1262,717,monitor=3
 CLICK_ENTER_DOWN: 1250,771,monitor=3

@@ -8,8 +8,8 @@ YAML_KEY_RUNNER = "SYSTEM_RUNNER"
 RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    {"print": "create_CLICK_CANDLE_COLOR..."},
-    "CORE/B_SETUP/CLICK_WINNINGS_COLOR/AA_create_CLICK_WINNINGS_COLOR.py",
+    {"print": "click_metamask_icon..."},
+    "CORE/C_SETUP/click_metamask_icon/AA_create_pixel_location.py",
 ]
 
 
