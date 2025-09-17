@@ -1,21 +1,22 @@
 import subprocess
-import time
 import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "CORE/Y_DATA/A_runners.yaml"
-YAML_KEY_RUNNER = "RUNNER_SYSTEM"
-RUNNER_ON_VALUE = "on"
+SETTINGS_FILE = "CORE/Y_DATA/C_flow.yaml"
+YAML_KEY_RUNNER = "WININGS_COLOR"
+RUNNER_ON_VALUE = "true"
 
 MAIN_SCRIPTS = [
-    "CORE/B_RESET/A_run.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/A_run.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/B_run.py",
-]
-
-SCRIPTS_FINALIZATION = [
-    "CORE/G_FITALATY/G_run.py",
+    {"print": "Collecting Winnings..."},
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_COLLECT_WINNINGS.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_COLLECT_ALL_CONFIRM.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_CONFIRM_METAMASK_ORDER.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_FINISH_AND_CLOSE_METAMASK.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
 ]
 # ==============================================
 
@@ -27,10 +28,7 @@ def load_settings():
 
 
 def is_runner_on(value) -> bool:
-    """
-    Универсальная проверка YAML_KEY_RUNNER.
-    Поддерживает строки и булевы значения.
-    """
+    """Проверка YAML_KEY_RUNNER (строка или bool)."""
     if isinstance(value, bool):
         return value
     if isinstance(value, str):
@@ -43,6 +41,7 @@ def run_script(script):
     if isinstance(script, dict) and "print" in script:
         print(script["print"])
     elif isinstance(script, str):
+        print(f"=== RUN {script} ===")
         subprocess.run(["python", script], check=False)
     else:
         print(f"[WARN] Неверный тип шага: {script}")
@@ -55,22 +54,14 @@ def run_script_list(scripts):
 
 
 def main():
-    """Основной цикл"""
-    try:
-        while True:
-            settings = load_settings()
-            if is_runner_on(settings.get(YAML_KEY_RUNNER, "")):
-                run_script_list(MAIN_SCRIPTS)
-            else:
-                run_script_list(SCRIPTS_FINALIZATION)
-                break
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print("\n[INTERRUPT] Пользователь прервал выполнение (Ctrl+C).")
-        print("→ Выполняем SCRIPTS_FINALIZATION...")
-        run_script_list(SCRIPTS_FINALIZATION)
-        sys.exit(0)
+    """Одиночный запуск"""
+    settings = load_settings()
+    if is_runner_on(settings.get(YAML_KEY_RUNNER, "")):
+        run_script_list(MAIN_SCRIPTS)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

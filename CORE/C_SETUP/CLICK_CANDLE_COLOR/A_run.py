@@ -1,5 +1,4 @@
 import subprocess
-import time
 import yaml
 import sys
 
@@ -9,15 +8,12 @@ YAML_KEY_RUNNER = "RUNNER_SYSTEM"
 RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    "CORE/B_RESET/A_run.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/A_run.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/B_run.py",
+    {"print": "create_CLICK_CANDLE_COLOR..."},
+    "CORE/C_SETUP/CLICK_CANDLE_COLOR/AA_create_CLICK_CANDLE_COLOR.py",
+    {"print": "check if correct colores picked..."},
+    "CORE/C_SETUP/tools/click_CHECK_CANDLE_COLOR.py",
+    "CORE/C_SETUP/CLICK_CANDLE_COLOR/AB_if_CANDLE_COLOR_is_ZERO.py",
 ]
-
-SCRIPTS_FINALIZATION = [
-    "CORE/G_FITALATY/G_run.py",
-]
-# ==============================================
 
 
 def load_settings():
@@ -27,10 +23,7 @@ def load_settings():
 
 
 def is_runner_on(value) -> bool:
-    """
-    Универсальная проверка YAML_KEY_RUNNER.
-    Поддерживает строки и булевы значения.
-    """
+    """Проверка YAML_KEY_RUNNER (строка или bool)."""
     if isinstance(value, bool):
         return value
     if isinstance(value, str):
@@ -43,6 +36,7 @@ def run_script(script):
     if isinstance(script, dict) and "print" in script:
         print(script["print"])
     elif isinstance(script, str):
+        print(f"=== RUN {script} ===")
         subprocess.run(["python", script], check=False)
     else:
         print(f"[WARN] Неверный тип шага: {script}")
@@ -55,22 +49,14 @@ def run_script_list(scripts):
 
 
 def main():
-    """Основной цикл"""
-    try:
-        while True:
-            settings = load_settings()
-            if is_runner_on(settings.get(YAML_KEY_RUNNER, "")):
-                run_script_list(MAIN_SCRIPTS)
-            else:
-                run_script_list(SCRIPTS_FINALIZATION)
-                break
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print("\n[INTERRUPT] Пользователь прервал выполнение (Ctrl+C).")
-        print("→ Выполняем SCRIPTS_FINALIZATION...")
-        run_script_list(SCRIPTS_FINALIZATION)
-        sys.exit(0)
+    """Одиночный запуск"""
+    settings = load_settings()
+    if is_runner_on(settings.get(YAML_KEY_RUNNER, "")):
+        run_script_list(MAIN_SCRIPTS)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

@@ -64,6 +64,8 @@ This is my personal experiment, with the following goals:
 - v.0.0.2 Automatically collects winnings
 - v.1.0.0 Created an A_AUTORUN flow for auto-login after PC restart
 - v.1.0.1 созданы примеры настройки с изоброжением
+- v.1.0.2 осуществлены 4 стратегии
+- v.1.0.3 начато осуществление C_SETUP
 
 ### IN FUTURE
 
@@ -94,7 +96,7 @@ git pull
 
 ```
 git add .
-git commit -m "v.1.0.1 созданы примеры настройки с изоброжением"
+git commit -m "v.1.0.3 начато осуществление C_SETUP"
 git push
 
 ```
