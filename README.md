@@ -61,21 +61,29 @@ This is my personal experiment, with the following goals:
 
 - v.0.0.1 Automatically creates an order
 - v.0.0.2 Automatically collects winnings
-- v.1.0.0 Created an A_AUTORUN flow for auto-login after PC restart
+- v.1.0.0 Started an A_AUTORUN flow for auto-login after PC restart
 - v.1.0.1 созданы примеры настройки с изоброжением
 - v.1.0.2 осуществлены 4 стратегии
 - v.1.0.3 начато осуществление C_SETUP
 - v.1.0.4 созданы все шаги в C_SETUP
-- v.1.0.5 следующий шаг тестирование их группами 
+- v.1.0.5 создаты новые папки для C_SETUP надо их все подключить
+
+- v.1.0.6 создать 5 акаунтов metamask, 1 master, 4 test
+- v.1.0.7 следующий шаг тестирование их группами 
 
 ### IN FUTURE
 
-- Plan to test functionality
-- Including PC restart on a separate Windows user
+- Plan to test functionality Including PC restart on a separate Windows user
 - Plan to create a user-friendly click setup tool with hints
-- Plan to conduct color tests when connecting pixels with color
 
 # INSTALL
+
+1. Create new "Windows Profile/User" and enter inside
+2. Turn off "Windows Notification" inside windows settings
+3. Open chrome and add "metamask extention" 
+2. create new metamask wallet and turn on BSC network
+3. 
+4. 
 
 ```
 pip install -r requirements.txt
@@ -97,7 +105,7 @@ git pull
 
 ```
 git add .
-git commit -m "v.1.0.4 созданы все шаги в C_SETUP"
+git commit -m "v.1.0.5 создаты новые папки для C_SETUP надо их все подключить"
 git push
 
 ```
