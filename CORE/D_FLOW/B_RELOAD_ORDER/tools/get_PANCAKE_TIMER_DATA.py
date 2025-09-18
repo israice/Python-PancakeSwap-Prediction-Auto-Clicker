@@ -12,7 +12,7 @@ from web3.exceptions import ContractLogicError
 # =========================
 # НАСТРОЙКИ
 # =========================
-SETTINGS_PATH = "CORE/Y_DATA/C_flow.yaml"   # только прямые слэши
+SETTINGS_PATH = "settings_clicks.yaml"   # только прямые слэши
 KEY_NAME      = "CANDLE_TIME"
 CONTRACT_ADDR = "0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA"  # Prediction V2 (BNB)
 RPC_TIMEOUT_S = 8

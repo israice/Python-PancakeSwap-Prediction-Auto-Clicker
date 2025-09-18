@@ -3,17 +3,24 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "settings_clicks.yaml"
-YAML_KEY_RUNNER = "CHECK_IF_CANDLE_TIME_IS_3"
-RUNNER_ON_VALUE = "true"
+SETTINGS_FILE = "CORE/Y_DATA/A_runners.yaml"
+YAML_KEY_RUNNER = "RUNNER_SYSTEM"
+RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
+    {"print": "RELOAD ORDER..."},
 
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_the_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",    
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAA_run_long.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAB_run_short.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAC_run_both.py",
 
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAD_if_CANDLE_COLOR_is_GREEN.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAE_if_CANDLE_COLOR_is_RED.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBAF_if_CANDLE_COLOR_is_ZERO.py",
+    "CORE/Z_TOOLS/next_desktop.py",
 ]
 # ==============================================
 

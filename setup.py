@@ -3,19 +3,14 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "settings_clicks.yaml"
-YAML_KEY_RUNNER = "CHECK_IF_CANDLE_TIME_IS_3"
-RUNNER_ON_VALUE = "true"
+SETTINGS_FILE = "CORE/Y_DATA/A_runners.yaml"
+YAML_KEY_RUNNER = "RUNNER_SYSTEM"
+RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-
-
+    {"print": "Choose pixel..."},
+    "CORE/Z_TOOLS/save_click.py",
 ]
-# ==============================================
 
 
 def load_settings():

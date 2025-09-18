@@ -2,3 +2,4 @@ pynput
 web3
 ruamel.yaml
 selenium
+pyyaml

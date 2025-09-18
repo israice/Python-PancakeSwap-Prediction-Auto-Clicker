@@ -4,7 +4,7 @@
 """
 
 # ===== НАСТРОЙКИ =====
-SETTINGS_PATH = "CORE/Y_DATA/C_flow.yaml"  # путь к YAML-файлу (с прямыми слэшами)
+SETTINGS_PATH = "settings_clicks.yaml"  # путь к YAML-файлу (с прямыми слэшами)
 KEY_NAME      = "MAXIMUM_ROUND_COUNTER"  # какой ключ увеличиваем
 INCREMENT_BY  = 1                # на сколько увеличивать (целое число)
 ENCODING      = "utf-8"          # кодировка файла

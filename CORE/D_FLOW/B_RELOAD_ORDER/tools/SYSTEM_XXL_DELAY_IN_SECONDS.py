@@ -5,7 +5,7 @@ import time
 import sys
 
 # === НАСТРОЙКИ ===
-SETTINGS_PATH = "CORE/Y_DATA/B_temp_data.yaml"          # путь к YAML
+SETTINGS_PATH = "settings_clicks.yaml"          # путь к YAML
 KEY = "SYSTEM_XXL_DELAY_IN_SECONDS"          # ключ с количеством секунд
 
 def read_delay(path: str, key: str) -> float:

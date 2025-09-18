@@ -67,9 +67,8 @@ This is my personal experiment, with the following goals:
 - v.1.0.3 начато осуществление C_SETUP
 - v.1.0.4 созданы все шаги в C_SETUP
 - v.1.0.5 создаты новые папки для C_SETUP надо их все подключить
-
 - v.1.0.6 создать 5 акаунтов metamask, 1 master, 4 test
-- v.1.0.7 следующий шаг тестирование их группами 
+- v.1.0.7 создан переход по экранам  
 
 ### IN FUTURE
 
@@ -105,7 +104,7 @@ git pull
 
 ```
 git add .
-git commit -m "v.1.0.5 создаты новые папки для C_SETUP надо их все подключить"
+git commit -m "v.1.0.7 создан переход по экранам "
 git push
 
 ```

@@ -4,7 +4,7 @@
 import re
 
 # ==== Настройки ====
-FILE_PATH = "CORE/Y_DATA/C_flow.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
+FILE_PATH = "settings_clicks.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
 KEY_NAME  = "CANDLE_COLOR"     # имя ключа в YAML
 NEW_VALUE = "GREEN"             # слово для записи (будет без кавычек)
 # ===================

@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 # ================== НАСТРОЙКИ (ТОЛЬКО ПРЯМЫЕ СЛЭШИ) ==================
-SETTINGS_PATH       = "CORE/Y_DATA/C_flow.yaml"   # путь к файлу
+SETTINGS_PATH       = "settings_clicks.yaml"   # путь к файлу
 TIME_KEY            = "CANDLE_TIME"       # имя ключа с временем
 FLAG_KEY            = "CHECK_IF_CANDLE_TIME_IS_3"  # имя флага для записи результата
 TARGET_DIGIT        = "3"                 # целевая цифра для сравнения

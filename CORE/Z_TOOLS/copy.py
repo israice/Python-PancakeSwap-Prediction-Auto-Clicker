@@ -1,10 +1,10 @@
 import re
 
 # ###############################################
-SOURCE_FILE = "CORE/Y_DATA/B_temp_data.yaml"
+SOURCE_FILE = "settings_clicks.yaml"
 SOURCE_VAR = "PIXEL_CONFIG"
 # ###############################################
-TARGET_FILE = "CORE/Y_DATA/C_flow.yaml"
+TARGET_FILE = "settings_clicks.yaml"
 TARGET_VAR = "click_metamask_icon"
 # ###############################################
 

@@ -3,19 +3,15 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "settings_clicks.yaml"
-YAML_KEY_RUNNER = "CHECK_IF_CANDLE_TIME_IS_3"
-RUNNER_ON_VALUE = "true"
+SETTINGS_FILE = "settings.yaml"
+YAML_KEY_RUNNER = "STRATEGY_TYPE"
+RUNNER_ON_VALUE = "BOTH"
 
 MAIN_SCRIPTS = [
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-
-
+    {"print": "run BOTH side strategy..."},
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBACA_STRATEGY_GO_WITH_FLOW_enabled.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBACB_STRATEGY_GO_WITH_FLOW_disabled.py",
 ]
-# ==============================================
 
 
 def load_settings():

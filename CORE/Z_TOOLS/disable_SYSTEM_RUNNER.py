@@ -5,7 +5,7 @@ import re
 
 # ==== Настройки ====
 FILE_PATH = "CORE/Y_DATA/A_runners.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
-KEY_NAME  = "SYSTEM_RUNNER"     # имя ключа в YAML
+KEY_NAME  = "RUNNER_SYSTEM"     # имя ключа в YAML
 NEW_VALUE = "off"             # слово для записи (будет без кавычек)
 # ===================
 

@@ -4,16 +4,17 @@ import sys
 
 # ================= НАСТРОЙКИ =================
 SETTINGS_FILE = "settings_clicks.yaml"
-YAML_KEY_RUNNER = "CHECK_IF_CANDLE_TIME_IS_3"
-RUNNER_ON_VALUE = "true"
+YAML_KEY_RUNNER = "CANDLE_COLOR"
+RUNNER_ON_VALUE = "ZERO"
 
 MAIN_SCRIPTS = [
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
+    {"print": "ZERO..."},
 
-
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/add_plus_1_to_ALL_ROUNDS_COUNTER.py",
+    
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_REFRESH_BROWSER.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_XXL_DELAY_IN_SECONDS.py",
+    
 ]
 # ==============================================
 

@@ -12,7 +12,7 @@ from pynput import mouse
 
 # ==============================
 # Глобальные настройки
-SETTINGS_FILE = "CORE/Y_DATA/B_temp_data.yaml"     # путь к файлу настроек
+SETTINGS_FILE = "settings_clicks.yaml"     # путь к файлу настроек
 VARIABLE_NAME = "PIXEL_CONFIG"       # имя переменной по умолчанию (можно переопределить аргументом)
 # ==============================
 

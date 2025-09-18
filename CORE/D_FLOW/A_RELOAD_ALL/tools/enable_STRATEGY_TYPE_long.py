@@ -4,9 +4,9 @@
 import re
 
 # ==== Настройки ====
-FILE_PATH = "settings_clicks.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
-KEY_NAME  = "CANDLE_COLOR"     # имя ключа в YAML
-NEW_VALUE = "RED"             # слово для записи (будет без кавычек)
+FILE_PATH = "settings.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
+KEY_NAME  = "STRATEGY_TYPE"     # имя ключа в YAML
+NEW_VALUE = "LONG"             # слово для записи (будет без кавычек)
 # ===================
 
 def main():

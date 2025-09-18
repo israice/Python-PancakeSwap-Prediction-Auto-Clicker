@@ -8,7 +8,7 @@ from ctypes import wintypes
 from pynput.mouse import Controller
 
 # ==============================
-SETTINGS_FILE = "CORE/Y_DATA/C_flow.yaml"         # путь к файлу настроек
+SETTINGS_FILE = "settings_clicks.yaml"         # путь к файлу настроек
 VAR_COORDS   = "CLICK_CANDLE_COLOR"     # имя переменной с координатами
 VAR_RESULT   = "CANDLE_COLOR"           # ключ, куда записываем результат
 

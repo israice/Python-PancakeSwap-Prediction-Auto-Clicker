@@ -10,7 +10,7 @@ from ctypes import wintypes
 from pynput.mouse import Controller, Button
 
 # ==============================
-SETTINGS_FILE = "CORE/Y_DATA/C_flow.yaml"     # путь к файлу настроек
+SETTINGS_FILE = "settings_clicks.yaml"     # путь к файлу настроек
 VARIABLE_NAME = "CLICK_REFRESH_BROWSER"       # имя переменной по умолчанию (можно переопределить аргументом)
 CLICK_DELAY = 0.5                  # задержка перед кликом, сек
 # ==============================
