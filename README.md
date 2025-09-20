@@ -1,21 +1,18 @@
 # Project Name
 Python-PancakeSwap-Prediction-Auto-Clicker
 
-# About Project
-
+## About Project
 This is my personal experiment, with the following goals:
-
 - Automate clicks in the pancakeswap.finance/prediction system
 
 ## What the project can do
-
 - Places bets in PancakeSwap Prediction independently
 - Uses screen coordinates for automated mouse clicks
 
 ![alt text](image.png)
 
 
-# Prohibitions and Recommendations
+## Recommendations
 
 - System requirements: Windows + Chrome + MetaMask
 - Avoid moving the mouse unnecessarily to prevent shifting during execution
@@ -25,12 +22,11 @@ This is my personal experiment, with the following goals:
 - Avoid moving the mouse unnecessarily, as it may disrupt execution
 
 <!-- ---------------------- -->
+### DEVELOPMENT
 
 <details>
 
-  <summary>For Development</summary>
-
-### VERSION
+  <summary>Version Log</summary>
 
 - v0.0.1 – Added automatic order creation
 - v0.0.2 – Added automatic winnings collection
@@ -44,22 +40,23 @@ This is my personal experiment, with the following goals:
 - v1.0.7 – Implemented screen navigation
 - v1.0.8 – Verified stable 24-hour operation
 - v1.0.9 – Added project name and repo changed from private to public
+- v1.0.10 – README.md updated
 
-### IN FUTURE
+### FUTURE PLANS
 
 - Plan to create a user-friendly click setup tool with hints
 
-# DOWNLOAD UPDATED FROM REMOTE REPO
+### DOWNLOAD UPDATED FROM REMOTE REPO
 
 ```
 git pull
 ```
 
-# UPDATE REMOTE REPO
+### UPDATE REMOTE REPO
 
 ```
 git add .
-git commit -m "v1.0.9 – Added project name and repo changed from private to public"
+git commit -m "v1.0.10 – README.md updated"
 git push
 
 ```
