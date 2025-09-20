@@ -1,3 +1,6 @@
+# Project Name
+Python-PancakeSwap-Prediction-Auto-Clicker
+
 # About Project
 
 This is my personal experiment, with the following goals:
@@ -40,6 +43,7 @@ This is my personal experiment, with the following goals:
 - v1.0.6 – Added 5 MetaMask accounts (1 master, 4 test)
 - v1.0.7 – Implemented screen navigation
 - v1.0.8 – Verified stable 24-hour operation
+- v1.0.9 – Added project name and repo changed from private to public
 
 ### IN FUTURE
 
@@ -55,7 +59,7 @@ git pull
 
 ```
 git add .
-git commit -m "v1.0.8 – Verified stable 24-hour operation "
+git commit -m "v1.0.9 – Added project name and repo changed from private to public"
 git push
 
 ```
