@@ -5,15 +5,25 @@ import sys
 # ================= НАСТРОЙКИ =================
 SETTINGS_FILE = "settings_clicks.yaml"
 YAML_KEY_RUNNER = "CANDLE_COLOR"
-RUNNER_ON_VALUE = "ZERO"
+RUNNER_ON_VALUE = "RED"
 
 MAIN_SCRIPTS = [
-    {"print": "ZERO..."},
+    {"print": "RED..."},
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ENTER_DOWN.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
 
-    "CORE/D_FLOW/B_RELOAD_ORDER/tools/add_plus_1_to_ALL_ROUNDS_COUNTER.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_INSIDE_SET_POSITION.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_CONFIRM_AMMOUNT.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_METAMASK_ORDER.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_METAMASK_ORDER.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_CLOSE_EXTENSION.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
     
     "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_REFRESH_BROWSER.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_XXL_DELAY_IN_SECONDS.py",
     
 ]
 # ==============================================

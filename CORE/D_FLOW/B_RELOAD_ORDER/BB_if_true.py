@@ -8,12 +8,15 @@ YAML_KEY_RUNNER = "CHECK_IF_CANDLE_TIME_IS_3"
 RUNNER_ON_VALUE = "true"
 
 MAIN_SCRIPTS = [
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
-    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_and_change_desktop.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBA_run_1_and_change_desktop_2.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBB_run_2_and_change_desktop_3.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBC_run_3_and_change_desktop_4.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BBD_run_4_and_change_desktop_1.py",
 
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/add_plus_1_to_ROUND_COUNTER.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/add_plus_1_to_ALL_ROUNDS_COUNTER.py",
 
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_XXL_DELAY_IN_SECONDS.py",
 ]
 # ==============================================
 

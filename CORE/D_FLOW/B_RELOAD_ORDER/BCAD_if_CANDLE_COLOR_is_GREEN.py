@@ -3,14 +3,30 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "settings.yaml"
-YAML_KEY_RUNNER = "STRATEGY_GO_WITH_FLOW"
-RUNNER_ON_VALUE = "DISABLE"
+SETTINGS_FILE = "settings_clicks.yaml"
+YAML_KEY_RUNNER = "CANDLE_COLOR"
+RUNNER_ON_VALUE = "GREEN"
 
 MAIN_SCRIPTS = [
-    {"print": "STRATEGY_GO_WITH_FLOW - ENABLED..."},
-    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CHECK_CANDLE_COLOR_go_enabled.py",
+    {"print": "GREEN..."},
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ENTER_UP.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_INSIDE_SET_POSITION.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_CONFIRM_AMMOUNT.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_METAMASK_ORDER.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_METAMASK_ORDER.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_CLICK_ON_CLOSE_EXTENSION.py",
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_REFRESH_BROWSER.py",
+    
 ]
+# ==============================================
 
 
 def load_settings():

@@ -10,7 +10,7 @@ RUNNER_ON_VALUE = "on"
 
 MAIN_SCRIPTS = [
     "CORE/B_RESET/A_run.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/A_run.py",
+    # "CORE/D_FLOW/A_RELOAD_ALL/A_run.py",
     "CORE/D_FLOW/B_RELOAD_ORDER/B_run.py",
 ]
 

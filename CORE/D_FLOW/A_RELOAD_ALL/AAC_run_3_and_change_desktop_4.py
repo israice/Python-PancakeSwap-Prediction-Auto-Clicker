@@ -3,9 +3,9 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "CORE/Y_DATA/A_runners.yaml"
-YAML_KEY_RUNNER = "RUNNER_SYSTEM"
-RUNNER_ON_VALUE = "on"
+SETTINGS_FILE = "settings.yaml"
+YAML_KEY_RUNNER = "STRATEGY_GO_WITH_FLOW"
+RUNNER_ON_VALUE = "ENABLE"
 
 MAIN_SCRIPTS = [
     {"print": "Reloading ALL..."},
@@ -24,9 +24,11 @@ MAIN_SCRIPTS = [
     "CORE/D_FLOW/A_RELOAD_ALL/tools/click_COLLECT_ALL_CONFIRM.py",
         "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
     "CORE/D_FLOW/A_RELOAD_ALL/tools/click_CONFIRM_METAMASK_ORDER.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_FINISH_AND_CLOSE_METAMASK.py",
         "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_CONFIRM_METAMASK_ORDER.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_FINISH_AND_CLOSE_METAMASK.py",
+        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
     "CORE/D_FLOW/A_RELOAD_ALL/tools/click_REFRESH_BROWSER.py",
     # ##############################
     "CORE/D_FLOW/A_RELOAD_ALL/tools/disable_STRATEGY_GO_WITH_FLOW.py",

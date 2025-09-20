@@ -6,7 +6,7 @@ import re
 # ==== Настройки ====
 FILE_PATH = "settings_clicks.yaml"   # путь к файлу с ПРЯМЫМИ слэшами
 KEY_NAME  = "INSERT_AMMOUNT_IN_BNB"     # имя ключа в YAML
-NEW_VALUE = "0.001"             # слово для записи (будет без кавычек)
+NEW_VALUE = "0.002"             # слово для записи (будет без кавычек)
 # ===================
 
 def main():

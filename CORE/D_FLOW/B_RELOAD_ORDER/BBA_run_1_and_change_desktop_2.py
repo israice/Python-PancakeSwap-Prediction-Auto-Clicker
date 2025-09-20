@@ -3,17 +3,24 @@ import yaml
 import sys
 
 # ================= НАСТРОЙКИ =================
-SETTINGS_FILE = "CORE/Y_DATA/A_runners.yaml"
-YAML_KEY_RUNNER = "RUNNER_RESET"
-RUNNER_ON_VALUE = "on"
+SETTINGS_FILE = "settings.yaml"
+YAML_KEY_RUNNER = "STRATEGY_TYPE"
+RUNNER_ON_VALUE = "LONG"
 
 MAIN_SCRIPTS = [
-    {"print": "RESET..."},
-    "CORE/B_RESET/tools/reset_MAXIMUM_ROUND_COUNTER.py",
-    # ###################################
-    "CORE/B_RESET/AA_PRE_RESET.py",
-    # ###################################
-    "CORE/B_RESET/tools/disable_RESET.py",
+    {"print": "RELOAD ORDER..."},
+
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_the_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",    
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAA_run_long.py",
+
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAD_if_CANDLE_COLOR_is_GREEN.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAE_if_CANDLE_COLOR_is_RED.py",
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAF_if_CANDLE_COLOR_is_ZERO.py",
+    
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/enable_STRATEGY_TYPE_short.py",
+    "CORE/Z_TOOLS/next_desktop.py",
 ]
 # ==============================================
 

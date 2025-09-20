@@ -12,6 +12,8 @@ MAIN_SCRIPTS = [
     "CORE/G_FITALATY/tools/enable_SYSTEM_RUNNER.py",
     "CORE/G_FITALATY/tools/enable_RESET.py",
     "CORE/G_FITALATY/tools/enable_PRE_RESET.py",
+    "CORE/D_FLOW/A_RELOAD_ALL/tools/enable_STRATEGY_TYPE_long.py",
+    
 ]
 # ==============================================
 

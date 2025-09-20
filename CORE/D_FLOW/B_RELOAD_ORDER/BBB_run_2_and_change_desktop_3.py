@@ -8,29 +8,15 @@ YAML_KEY_RUNNER = "STRATEGY_TYPE"
 RUNNER_ON_VALUE = "SHORT"
 
 MAIN_SCRIPTS = [
-    {"print": "Reloading ALL..."},
-    # ##############################
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_the_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",    
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    # ##############################
-    {"print": "Collecting Winnings..."},
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_OPEN_HISTORY_SIDEBAR.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_FILTER_BY_UNCOLLECTED.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_COLLECT_WINNINGS.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_COLLECT_ALL_CONFIRM.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_CONFIRM_METAMASK_ORDER.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_CONFIRM_METAMASK_ORDER.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_MEDIUM_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_FINISH_AND_CLOSE_METAMASK.py",
-        "CORE/D_FLOW/A_RELOAD_ALL/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
-    "CORE/D_FLOW/A_RELOAD_ALL/tools/click_REFRESH_BROWSER.py",
-    # ##############################
+    {"print": "RELOAD ORDER..."},
+
+    "CORE/D_FLOW/B_RELOAD_ORDER/tools/click_the_CHECK_IF_NEED_TO_CLOSE_PROMO_POPUP.py",    
+        "CORE/D_FLOW/B_RELOAD_ORDER/tools/SYSTEM_SMALL_DELAY_IN_SECONDS.py",
+    
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAB_run_short.py",
+
+    "CORE/D_FLOW/B_RELOAD_ORDER/BCAE_if_CANDLE_COLOR_is_RED.py",
+    
     "CORE/D_FLOW/A_RELOAD_ALL/tools/enable_STRATEGY_TYPE_BOTH.py",
     "CORE/D_FLOW/A_RELOAD_ALL/tools/enable_STRATEGY_GO_WITH_FLOW.py",
     "CORE/Z_TOOLS/next_desktop.py",
